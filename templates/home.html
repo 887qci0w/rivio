@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>rivio</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>rivio - <strong>Sentiment Analysis for review system</strong></h1>
+        <nav>
+            <ul>
+                <li class="home"><a href="home.html">Home</a></li>
+                <li class="reviewlist"><a href="reviewlist.html">Review List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="ml-container">
+        <form action="../predict" method="POST">
+            <p>Rate your review!</p>
+            <textarea style="color: #c38888; font-size: 20px" name="message" rows="10" cols="60">Review text</textarea>
+            <br/>
+            <input type="submit" class="btn-info" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

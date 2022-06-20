@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Review List</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Review List</h1>
+        <nav>
+            <ul>
+                <li class="home"><a href="home.html">Home</a></li>
+                <li class="reviewlist"><a href="reviewlist.html">Review List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <table class="table">
+        <tr class="info">
+            <th>review</th>
+            <th>sentiment</th>
+        </tr>
+        <tbody id="restaurant">
+        </tbody>
+    </table>
+    <script>
+        var Array1 = [{
+                "Review": "Service was very prompt. ",
+                "sentiment": "positive "
+            }, {
+                "Review": "Would not go back. ",
+                "sentiment": "negative "
+            }, {
+                "Review": "The cashier had no care what so ever on what I had to say it still ended up being wayyy overpriced. ",
+                "sentiment": "negative "
+            }, {
+                "Review": "I tried the Cape Cod ravoli, chicken, with cranberry...mmmm! ",
+                "sentiment": "neutral "
+            }, {
+                "Review": "I was disgusted because I was pretty sure that was human hair. ",
+                "sentiment": "negative "
+            }, {
+                "Review": "I was shocked because no signs indicate cash only. ",
+                "sentiment": "negative "
+            }, {
+                "Review": "Highly recommended. ",
+                "sentiment": "positive "
+            }, {
+                "Review": "Waitress was a little slow in service. ",
+                "sentiment": "negative "
+            }, {
+                "Review": "This place is not worth your time, let alone Vegas. ",
+                "sentiment": "negative "
+            }, {
+                "Review": "did not like at all. ",
+                "sentiment": "negative "
+            }, {
+                "Review": "The worst was the salmon sashimi.",
+                "sentiment": "negative"
+            }, {
+                "Review": "Took an hour to get our food only 4 tables in restaurant my food was Luke warm, Our sever was running around like he was totally overwhelmed.",
+                "sentiment": "negative"
+            }, {
+                "Review": "This hole in the wall has great Mexican street tacos, and friendly staff.",
+                "sentiment": "positive"
+            }, {
+                "Review": "- They never brought a salad we asked for.",
+                "sentiment": "negative"
+            }, {
+                "Review": "That's right....the red velvet cake.....ohhh this stuff is so good.",
+                "sentiment": "positive"
+            }, {
+                "Review": "So they performed.",
+                "sentiment": "neutral"
+            }, {
+                "Review": "I could care less... The interior is just beautiful.",
+                "sentiment": "mixed"
+            }, {
+                "Review": "Service is also cute.",
+                "sentiment": "positive"
+            }, {
+                "Review": "The food, amazing.",
+                "sentiment": "positive"
+            }, {
+                "Review": "The Burrittos Blah!",
+                "sentiment": "negative"
+            }, {
+                "Review": "Love my Echo!",
+                "sentiment": "positive"
+            }, {
+                "Review": "Loved it!",
+                "sentiment": "positive"
+            }, {
+                "Review": "Sometimes while playing a game, you can answer a question correctly but Alexa says you got it wrong and answers the same as you.� I like being able to turn lights on and off while away from home.",
+                "sentiment": "negative"
+            }, {
+                "Review": "I have had a lot of fun with this thing. My 4 yr old learns about dinosaurs, i control the lights and play games like categories. Has nice sound when playing music as well.",
+                "sentiment": "positive"
+            }, {
+                "Review": "I received the echo as a gift. I needed another Bluetooth or something to play music easily accessible, and found this smart speaker. Can�t wait to see what else it can do.",
+                "sentiment": "positive"
+            }, {
+                "Review": "Without having a cellphone, I cannot use many of her features. I have an iPad but do not see that of any use.� It IS a great alarm.� If u r almost deaf, you can hear her alarm in the bedroom from out in the living room, so that is reason enough to keep her.It is fun to ask random questions to hear her response.� She does not seem to be very smartbon politics yet.",
+                "sentiment": "positive"
+            }, {
+                "Review": "I think this is the 5th one I've purchased. I'm working on getting one in every room of my house. I really like what features they offer specifily playing music on all Echos and controlling the lights throughout my house.",
+                "sentiment": "positive"
+            },
+
+        ]
+
+        buildTable(Array1)
+
+        function buildTable(data) {
+            var table = document.getElementById("restaurant")
+
+            for (var i = 0; i < data.length; i++) {
+                var row = `<tr>
+                            <td>${data[i].Review}</td>
+                            <td>${data[i].sentiment}</td>
+                       </tr>`
+                table.innerHTML += row
+            }
+        }
+    </script>
+</body>
+
+</html>

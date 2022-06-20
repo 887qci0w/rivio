@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>rivio</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>rivio - <strong>Sentiment Analysis for review system</strong></h1>
+        <nav>
+            <ul>
+                <li class="home"><a href="http://127.0.0.1/templates/home.html">Home</a></li>
+                <li class="reviewlist"><a href="reviewlist.html">Review List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p style="margin-left:2%;font-family:'Kdam Thmor Pro';font-size:25px;color:#c38888;font-size:20;">Sentiment</p>
+    <div class="results">
+        {% if prediction == 1%}
+        <h2 style="color:red;">Negative</h2>
+        {% elif prediction == 0%}
+        <h2 style="color:blue;">Positive</h2>
+        {% endif %}
+        <input type="submit" class="btn-info" value="Save result">
+    </div>
+
+</body>
+
+</html>
